@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> Calendar </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link href="bootstrap-3.2.0-dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="MyStyles/font1/font1.css" />
+<link rel="stylesheet" href="fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-thumbs.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-buttons.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="MyStyles/Styles1.css" type="text/css" media="screen" />
+</head>
+
+<style>
+	body{
+		background-image: url("back.jpg");
+	}
+	
+</style>
+
+<body>
+	
+	<!-- Initializing all the scripts-->
+	<script src="bootstrap-3.2.0-dist/js/jquery.min.js"></script>
+	<script src="bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
+	
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript" src="fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+	<script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js"></script>
+	<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-buttons.js"></script>
+	<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-media.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#single_1").fancybox({
+				helpers: {
+					title : {
+						type : 'float'
+					}
+				}
+			});
+		});
+		
+	</script>
+	<script type="text/javascript" src="/fancybox/source/helpers/jquery.fancybox-thumbs.js"></script>
+
+	
+	
+	
+	<div class="panelspace"></div>
+	
+	<b><font face="oldstyle_1hplhs">
+	<!-- Initializing the navigation bar.
+	....................................
+	....................................-->
+	<center>
+		<ul class="nav nav-pills  nav-justified">
+	
+			<li><a href="index.html"><font color="#0000A0">Home</font></a></li>
+			<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+						<font color="#0000A0">Projects</font> <span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu" role="menu">
+						<li class="active"><a href="calendar.html"><font color="#0000A0">C++ Calendar</font></a></li>
+						<li><a href="plantsvzombies.html"><font color="#0000A0">Java Plants vs. Zombies</font></a></li>
+						<li><a href="clock.html"><font color="#0000A0">Raspberry Pi Clock</font></a></li>
+						<li><a href="calendargui.html"><font color="#0000A0">Java Calendar GUI (MCalendar)</font></a></li>
+						<li><a href="robovoy.html"><font color="#0000A0">RoboVoy (Autonomous Vehicle)</font></a></li>
+						<li class="disabled"><a href="#"><font color="#0000A0">This Website</font></a></li>
+				</ul>
+			</li>
+			<li><a href="courses.html"><font color="#0000A0">Completed Courses</font></a></li>
+			<li><a href="aboutme.html"><font color="#0000A0">About Me</font></a></li>
+		</ul>
+	</center>
+	
+
+	<div id="container-fluid" style="viewport" class="myMainContainer">	
+	
+		<!-- Initializing the content container-->
+		<div class="content">
+			
+			
+				<!-- Initializing the title in a list group-->
+				<div class="panelspace"></div>
+				<div class="panelhello" >
+					<h1><font color="#0000A0"><center>Calendar using C++ </center></font></h1>
+				</div>
+				
+				<div class="panelspace"></div>			
+				
+				<center>
+				<div class="thirdinfo">
+					<div class="picinv">
+						<div class="panelhello">
+							<p1><font color="#000000">
+							<center>In this project, a C++ program was designed to produce monthly calendars for any month and year requested. <br>As long as the year is 1900 or greater
+							</center></font></p1>
+						</div>
+						<div class="panelspace"></div>
+						<div class="panelhello" id="test">
+							<p1><font color="#000000"><center>
+							In-order to get this program to work, different functions; each with a specific purpose were created. 
+							</center></font></p1>
+						</div>
+					</div>
+					<div class="secondinfo3">
+						<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+								  <!-- Indicators -->
+								  <ol class="carousel-indicators">
+									<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+									<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+								  </ol>
+									...
+								  <!-- Wrapper for slides -->
+								  <div class="carousel-inner">
+									<div class="item active">
+									  <center>
+									  <img src="calendar1.png" style="width: 25vw; height: 25vw;">
+									  </center>
+									  <div class="carousel-caption">
+										<font>Program when it first starts</font>
+									  </div>
+									</div>
+									<div class="item">
+									  <center>
+									  <img src="calendar2.png" style="width: 25vw; height: 25vw;">
+									  </center>
+									  <div class="carousel-caption">
+										<font>Program with already inputted requests</font>
+									  </div>
+									</div>
+									...
+								  </div>
+
+								  <!-- Controls -->
+								  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+									<span class="glyphicon glyphicon-chevron-left"></span>
+								  </a>
+								  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+									<span class="glyphicon glyphicon-chevron-right"></span>
+								  </a>
+						</div>
+					</div>
+				</div>
+				</center>
+				
+				
+				<div class="panelspace"></div>
+				<div class="panelhello1">
+					<center><h2> <font color="#0000A0"><b>The Functions Are:</b></font></h2></center>
+				</div>
+				<div class="panelspace"></div>
+				<center>	
+					<!-- Initializing the third panel-->
+					<div class="thirdinfo">
+						<ul class="list-group" >
+							<font color="#000000">
+							<li class="list-group-item">bool isLeap (int year); <p2><font color="#CD7F32">// Finds if the year is leap</font></p2></li>
+							<li class="list-group-item">int daysInMonth (int month, int year); <p2><font color="#CD7F32">// Finds how many days in the month</font></p2></li>
+							<li class="list-group-item">int daysSinceJan1 (int day, int month, int year); <p2><font color="#CD7F32">// Finds how many days since January 1st</font></p2></li>
+							<li class="list-group-item">int daysInPreviousYears (int year); <p2><font color="#CD7F32">// Finds how many days in the year</font></p2></li>
+							<li class="list-group-item">int daysSinceStartOfTime (int day, int month, int year); <p2><font color="#CD7F32">// Finds the days since Janurary 1st, 1900</font></p2></li>
+							<li class="list-group-item">int dayOfWeek (int day, int month, int year); <p2><font color="#CD7F32">// Finds the day of the week</font></p2></li>
+							<li class="list-group-item">void createCalendar (int month, int year); <p2><font color="#CD7F32">// Creates the calendar</font></p2></li>
+							</font>
+						</ul>
+					</div>
+				</center>
+				
+				<center>
+				<div class="secondinfo">	
+					<!-- Initializing a main panel-->	
+						<p1> <font color="#000000">The main function in the C++ program takes care of the input and calls the previous listed function in-order to generate the calendar and print it. 
+						</font></p1>
+				</div>	
+				<div class="panelspace"></div>				
+				<div class="secondinfo">	
+					<!-- Initializing a main panel-->	
+						<p1> <font color="#000000">
+						To request a specific month's calendar, the month and the year are entered as shown in the second picture. To stop the program the user needs to input 0 0.
+						</font></p1>
+						
+				</div>					
+				</center>
+				<div class="panelspace"></div><div class="panelspace"></div>
+				<center>
+				<div class="secondinfo1">	
+					<!-- Initializing a main panel-->	
+						<p2><font color="#000000">"Thank you for visiting my website." Maytham Sabbagh </font></p2>
+				</div>
+				</center>
+				<div class="panelspace"></div><div class="panelspace"></div>
+		</div>
+
+	</div>
+	</font></b>
+</body>
+
+
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> Plants vs Zombies Java GUI</title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link href="bootstrap-3.2.0-dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="MyStyles/font1/font1.css" />
+<link rel="stylesheet" href="fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-thumbs.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-buttons.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="MyStyles/Styles1.css" type="text/css" media="screen" />
+</head>
+
+<style>
+	body{
+		background-image: url("back.jpg");
+	}
+</style>
+
+<body>
+
+	<!-- Initializing all the scripts-->
+	<script src="bootstrap-3.2.0-dist/js/jquery.min.js"></script>
+	<script src="bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
+	
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript" src="fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+	<script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js"></script>
+	<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-buttons.js"></script>
+	<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-media.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#single_1").fancybox({
+				helpers: {
+					title : {
+						type : 'float'
+					}
+				}
+			});
+		});
+	
+	</script>
+	<script type="text/javascript" src="/fancybox/source/helpers/jquery.fancybox-thumbs.js"></script>
+	
+	<div class="panelspace"></div>
+
+	<b><font face="oldstyle_1hplhs">
+	<!-- Initializing the navigation bar-->
+	<center>
+		<ul class="nav nav-pills  nav-justified">
+	
+			<li><a href="index.html"><font color="#0000A0">Home</font></a></li>
+			<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+						<font color="#0000A0">Projects</font> <span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="calendar.html"><font color="#0000A0">C++ Calendar</font></a></li>
+						<li class="active"><a href="plantsvzombies.html"><font color="#0000A0">Java Plants vs. Zombies</font></a></li>
+						<li><a href="clock.html"><font color="#0000A0">Raspberry Pi Clock</font></a></li>
+						<li><a href="calendargui.html"><font color="#0000A0">Java Calendar GUI (MCalendar)</font></a></li>
+						<li><a href="robovoy.html"><font color="#0000A0">RoboVoy (Autonomous Vehicle)</font></a></li>
+						<li class="disabled"><a href="#"><font color="#0000A0">This Website</font></a></li>
+				</ul>
+			</li>
+			<li><a href="courses.html"><font color="#0000A0">Completed Courses</font></a></li>
+			<li><a href="aboutme.html"><font color="#0000A0">About Me</font></a></li>
+		</ul>
+	</center>
+	
+
+	<div id="container-fluid" style="viewport" class="myMainContainer">	
+
+		<div class="content">
+				<!-- Initializing the title in a list group-->
+				<div class="panelspace"></div>
+				<div class="panelhello" >
+					<h1><font color="#0000A0"><center>Plants vs. Zombies using Java</center></font></h1>
+				</div>
+				
+				<div class="panelspace"></div>	
+				
+				<div class="thirdinfo" >
+					<!-- Initializing the main info panel-->
+					<div class="maininfo">
+						<center><p1><font color="#000000">In this project, a Java program was designed to simulate a plants vs zombies game. <br>
+						The game is a popular game on phones, tablets and computers. 
+						<br><br>
+						This project was done through 5 assignments in an object oriented programming course. Using Java, different classes were created to simulate different parts of the game.
+						The final part of the project was to create a GUI to represent the game. The picture on the right shows the game when it first runs.
+						</font></p1></center>
+					</div>
+
+					<!-- Initializing the picture panel-->
+					<div class="pic">
+						<div class="panelspace"></div>	<div class="panelspace"></div>	
+						<center>
+							<a id="single_1" href="plants1.png" title="The game when it first opens">
+								<img src="plants11.png" alt="" style="border:1px solid #0000FF; border-radius: 1.5vw" />
+							</a>
+						</center>
+					</div>
+				</div> 
+				
+				
+				<div class="panelspace" style="clear: both"></div>
+				<div class="panelhello1" >
+					<center><h2><font color="#0000A0"><b>The Classes Are:</b></font></h2></center>
+				</div>
+				<div class="panelspace"></div>
+				<center>	
+					<!-- Initializing the third panel-->
+					<div class="thirdinfo">
+						<ul class="list-group" >
+							<font color="#000000">
+							<li class="list-group-item">Garden (Main class). <p2><font color="#CD7F32">// Represents the game space.</font></p2></li>
+							<li class="list-group-item">GardenItem (Abstract). <p2><font color="#CD7F32">// Represents the different items in the garden.</font></p2></li>
+							<li class="list-group-item">Pea (extends GardenItem). <p2><font color="#CD7F32">// Represents the peas shot by the peashooter.</font></p2></li>
+							<li class="list-group-item">Zombie (extends GardenItem). <p2><font color="#CD7F32">// Represents the zombies in the game.</font></p2></li>
+							<li class="list-group-item">Plant (Abstract, extends GardenItem). <p2><font color="#CD7F32">// Represents the different plants in the game.</font></p2></li>
+							<li class="list-group-item">PeaShooter (extends Plant). <p2><font color="#CD7F32">// Represents the peashooters in the game.</font></p2></li>							
+							<li class="list-group-item">Sunflower (extends Plant). <p2><font color="#CD7F32">// Represents the sunflowers in the game.</font></p2></li>
+							<li class="list-group-item">GraphicalGarden (extends Garden). <p2><font color="#CD7F32">// Contains the GUI implementation of the Garden.</font></p2></li>
+							<li class="list-group-item">ButtonListener (implements ActionListener). <p2><font color="#CD7F32">// Used to identify when a button in the garden is pressed.</font></p2></li>
+							</font>
+						</ul>
+					</div>
+				</center>
+				
+				
+				<div class="panelfour2">
+					<!-- Initializing the picture panel-->
+					<div class="picinv">
+						<div class="panelspace"></div>	<div class="panelspace"></div>	
+						<center>
+							<a id="single_1" href="plants2.png" title="The game running">
+								<img src="plants22.png" alt="" style="border:1px solid #0000FF; border-radius: 1.5vw"/>
+							</a>
+						</center>
+					</div>
+					
+					<div class="maininfoinv">
+						<center>
+							<p1> <font color="#000000">
+							The picture to the left shows the game running<br><br>
+							The picture to the right shows the game when the player wins<br><br>
+							The letters in the GUI represent (P: PeaShooter, S: Sunflower, o: Pea, Z:Zombie)
+							</ul></font></p1>
+						</center>
+					</div>
+					
+					<!-- Initializing the picture panel-->
+					<div class="picinv2">
+						<div class="panelspace"></div>	<div class="panelspace"></div>	
+						<center>
+							<a id="single_1" href="plants3.png" title="The game at the end when the user wins">
+								<img src="plants33.png" alt="" style="border:1px solid #0000FF; border-radius: 1.5vw"/>
+							</a>
+						</center>
+					</div>
+					
+				</div>
+				<center>
+				<div class="panelspace" style="clear: both"></div>		
+				<div class="secondinfo">	
+					<!-- Initializing a main panel-->	
+						<p1> <font color="#000000">
+						The user wins, when the number of zombies that have entered the garden and were killed reaches 10. If a zombie reaches the end of the garden 
+							(goes past the final location (left)), the player loses. A message indicating the player lost gets shown.</font></p1>
+						
+				</div>					
+				</center>
+				<div class="panelspace"></div><div class="panelspace"></div>
+				<center>
+				<div class="secondinfo1">	
+					<!-- Initializing a main panel-->	
+						<p2><font color="#000000">"Thank you for visiting my website." Maytham Sabbagh </font></p2>
+				</div>
+				</center>
+				<div class="panelspace"></div><div class="panelspace"></div>
+				
+		</div>
+
+
+	</div>
+	</font></b>
+	
+</body>
+
+
+</html>

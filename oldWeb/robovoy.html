@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RoboVoy (Autonomous Vehicle)</title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link href="bootstrap-3.2.0-dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="MyStyles/font1/font1.css" />
+<link rel="stylesheet" href="fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-thumbs.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-buttons.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="MyStyles/Styles1.css" type="text/css" media="screen" />
+</head>
+
+<style>
+	body{
+		background-image: url("back.jpg");
+	}
+</style>
+
+<body>
+
+	<!-- Initializing all the scripts-->
+	<script src="bootstrap-3.2.0-dist/js/jquery.min.js"></script>
+	<script src="bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
+	
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript" src="fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+	<script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js"></script>
+	<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-buttons.js"></script>
+	<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-media.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#single_1").fancybox({
+				helpers: {
+					title : {
+						type : 'float'
+					}
+				}
+			});
+		});
+		
+	</script>
+	<script type="text/javascript" src="/fancybox/source/helpers/jquery.fancybox-thumbs.js"></script>
+	
+	<div class="panelspace"></div>
+	<b><font face="oldstyle_1hplhs">
+	<!-- Initializing the navigation bar-->
+	<center>
+		<ul class="nav nav-pills  nav-justified">
+	
+			<li><a href="index.html"><font color="#0000A0">Home</font></a></li>
+			<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+						<font color="#0000A0">Projects</font> <span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="calendar.html"><font color="#0000A0">C++ Calendar</font></a></li>
+						<li><a href="plantsvzombies.html"><font color="#0000A0">Java Plants vs. Zombies</font></a></li>
+						<li><a href="clock.html"><font color="#0000A0">Raspberry Pi Clock</font></a></li>
+						<li><a href="calendargui.html"><font color="#0000A0">Java Calendar GUI (MCalendar)</font></a></li>
+						<li class="active"><a href="robovoy.html"><font color="#0000A0">RoboVoy (Autonomous Vehicle)</font></a></li>
+						<li class="disabled"><a href="#"><font color="#0000A0">This Website</font></a></li>
+				</ul>
+			</li>
+			<li><a href="courses.html"><font color="#0000A0">Completed Courses</font></a></li>
+			<li><a href="aboutme.html"><font color="#0000A0">About Me</font></a></li>
+		</ul>
+	</center>
+	
+
+	<div id="container-fluid" style="viewport" class="myMainContainer">	
+
+		<div class="content">
+
+				<div class="panelspace"></div>
+				<div class="panelhello" >
+					<h1><font color="#0000A0"><center>RoboVoy (Autonomous Vehicle)</center></font></h1>
+				</div>
+				
+				<div class="panelspace"></div>
+				
+				
+				<div class="panelfive">
+					<center>
+						<p1> <font color="#000000">
+						This project was part of the ELEC3907 (Engineering Project) course. In this course, students were
+						divided (randomly) into groups of approximately six students. Each group had to come up with a project to work on,
+						since the projects were not assigned. After hours of thinking, the group of six that I was in all agreed to work on 
+						and design a somewhat autonomous vehicle. A vehicle that does some autonomous movement on its own using sensors without 
+						human interference. That's when the design of RoboVoy began. 
+						
+						</font></p1>
+					</center>
+				</div>
+				<div class="panelspace"></div>
+
+				<div class="panelfour2">
+					<div class="panelhello1" >
+						<center><h2><font color="#0000A0"><b>Project Objectives:</b></font></h2></center>
+					</div>
+					<div class="panelspace"></div>
+					<center>
+						<div class="panelfive">
+							<center>
+								<p1> <font color="#000000">
+								The project objectives are listed below. The initial objectives are the objectives
+								that were set at the beginning of the course. The added objectives were added later 
+								on in the project when the time for extra features was available.
+								
+								</font></p1>
+							</center>
+						</div>
+						<div class="panelspace"></div>
+						<ul class="list-group" >
+							<font color="#000000">
+							<li class="list-group-item"><font color="#0000A0">Initial Objectives</font></li>
+							<li class="list-group-item">Budget of Under $100</li>
+							<li class="list-group-item">Autonomous Mobility (No Human Interference)</li>
+							<li class="list-group-item">JeeNode Controlled and Operated (Use the provided JeeNode Controller)</li>
+							<li class="list-group-item">Sensor Fusion (Use different sensors to offset any uncertainties)</li>
+							<li class="list-group-item"><font color="#0000A0">Added Objectives</font></li>
+							<li class="list-group-item">Remote Control (Backup when autonomous features fail (if they fail))</li>
+							<li class="list-group-item">Status LEDs (Proximity Indication)</li>
+							<li class="list-group-item">Available Room for Expansion (Other features can easily be implemented)</li>
+							</font>
+						</ul>
+					</center>
+				</div>
+				
+				<div class="panelfour2">
+					
+					<div class="panelhello1" >
+						<center><h2><font color="#0000A0"><b>Parts List:</b></font></h2></center>
+					</div>
+					<div class="panelspace"></div>
+				
+					<center>
+						<div class="panelfive">
+							<center>
+								<p1> <font color="#000000">
+								The parts and components used for this project are listed below. 
+								
+								</font></p1>
+							</center>
+						</div>
+						<div class="panelspace"></div>
+						<ul class="list-group" >
+							<font color="#000000">
+							<li class="list-group-item">JeeNode V6 Kit (x2)</li>
+							<li class="list-group-item">2WD Beginner Robot Chassis V2</li>
+							<li class="list-group-item">Pololu Dual DC Motor Driver</li>
+							<li class="list-group-item">SeeedStudio Ultrasonic Range Finder (3cm-400cm)</li>
+							<li class="list-group-item">Sharp IR Range Finder (10cm-80cm)</li>
+							<li class="list-group-item">I/O Expander (MCP23016 - 16Bit Expander - I2C)</li>
+							<li class="list-group-item">USB BUB II (x2, Debugger for JeeNode)</li>
+							<li class="list-group-item">SIRC-01 Sharp GP2 IR Sensor Cable (x2)</li>
+							<li class="list-group-item">Battery Holder (4xAA, x2)</li>
+							<li class="list-group-item">9V Battery Clip</li>
+							<li class="list-group-item">2-Axis Playstation Joystick</li>
+							<li class="list-group-item">On/Off Switch (x2)</li>
+							<li class="list-group-item">RGB LEDs (x9)</li>
+							</font>
+						</ul>
+					</center>
+				</div>
+				<div class="panelspace" style="clear: both"></div>
+				<div class="panelfour2">
+					
+					<div class="panelhello1" >
+						<center><h2><font color="#0000A0"><b>Pictures of the finished project can be seen below</b></font></h2></center>
+					</div>
+					<div class="panelspace"></div>
+					<center>
+					<div id="CarCarousel" class="carousel slide" data-ride="carousel">
+							  <!-- Indicators -->
+							  <ol class="carousel-indicators">
+								<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+								<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+								<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+							  </ol>
+								...
+							  <!-- Wrapper for slides -->
+							  <div class="carousel-inner">
+								<div class="item active">
+								  <center>
+								  <img src="Car1.jpg" style="width: 25vw; height: 25vw;">
+								  </center>
+								  <div class="carousel-caption">
+									<font>Front View</font>
+								  </div>
+								</div>
+								<div class="item">
+								  <center>
+								  <img src="Car2.jpg" style="width: 25vw; height: 25vw;">
+								  </center>
+								  <div class="carousel-caption">
+									<font>Front View</font>
+								  </div>
+								</div>
+								<div class="item">
+								  <center>
+								  <img src="Car3.jpg" style="width: 25vw; height: 25vw;">
+								  </center>
+								  <div class="carousel-caption">
+									<font>Top View</font>
+								  </div>
+								</div>
+								...
+							  </div>
+
+							  <!-- Controls -->
+							  <a class="left carousel-control" href="#CarCarousel" role="button" data-slide="prev">
+								<span class="glyphicon glyphicon-chevron-left"></span>
+							  </a>
+							  <a class="right carousel-control" href="#CarCarousel" role="button" data-slide="next">
+								<span class="glyphicon glyphicon-chevron-right"></span>
+							  </a>
+					</div>
+					</center>
+				</div>
+				<div class="panelspace" style="clear: both"></div>
+				<div class="panelfour2">
+					<div class="panelhello1" >
+						<center><h2><font color="#0000A0"><b>How the vehicle works:</b></font></h2></center>
+					</div>
+					<div class="panelspace"></div>
+					<center>
+						<div class="panelfive">
+							<center>
+								<p1> <font color="#000000">
+								The vehicle's main objective is to follow the vehicles in front. To do this, the ultrasonic range finder was used to determine the distance of the vehicle in front. 
+								If the vehicle in front is (15-90 cm) away, the vehicle would move and get closer, if the vehicle in front is (< 15 cm), the vehicle would not move, if the vehicle in front
+								is (> 90 cm), the vehicle would not move. This means, that when the vehicle in front is (15-90 cm) away, the main vehicle would move closer and stop once its distance to the front vehicle
+								is less than 15 cm. If the vehicle in front is moving away, the main vehicle would follow. 
+								</font></p1>
+							</center>
+						</div>
+						<div class="panelspace"></div>
+						<div class="panelfive">
+							<center>
+								<p1> <font color="#000000">
+								To handle the front vehicle's turns, 2 IR sensors were used on either sides of the front of the main vehicle. The readings from the two IRs is used to compared which
+								side of the front vehicle is closer to the main vehicle. This means, if the front vehicle is turning left, the left IR would have a higher reading since it is closer to the front vehicle
+								than the right IR, the opposite is true. 
+								</font></p1>
+							</center>
+						</div>
+						<div class="panelspace"></div>
+						<div class="panelfive">
+							<center>
+								<p1> <font color="#000000">
+								The H-Bridge (Motor Driver) is used to power the two motors that require higher voltage than that used by the JeeNode. The I/O expander is used to provide extra Digital General Purpose Input Output
+								ports that are needed by the H-Bridge and the LEDs. 
+								</font></p1>
+							</center>
+						</div>
+						<div class="panelspace"></div>
+						<div class="panelfive">
+							<center>
+								<p1> <font color="#000000">
+								All the vehicle's autonomous calculations and decisions are done via software, the software for the project was custom made by myself (RF sending and receiving was done by another member of the team). The software can be found <a href="https://github.com/Maytham1994/3rdYearProject" target="_blank">HERE</a>. A block diagram of the vehicle, 
+								a circuit diagram and a software block diagram can be seen below. 
+								</font></p1>
+							</center>
+						</div>
+						<div class="panelspace"></div>
+						<div id="Car1Carousel" class="carousel slide" data-ride="carousel">
+							  <!-- Indicators -->
+							  <ol class="carousel-indicators">
+								<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+								<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+								<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+							  </ol>
+								...
+							  <!-- Wrapper for slides -->
+							  <div class="carousel-inner">
+								<div class="item active">
+								  <center>
+								  <img src="SysLevel.png" style="width: 25vw; height: 25vw;">
+								  </center>
+								  <div class="carousel-caption">
+									<font color="#000000">System Level Diagram</font>
+								  </div>
+								</div>
+								<div class="item">
+								  <center>
+								  <img src="CircLevel.png" style="width: 25vw; height: 25vw;">
+								  </center>
+								  <div class="carousel-caption">
+									<font color="#000000">Circuit Level Diagram</font>
+								  </div>
+								</div>
+								<div class="item">
+								  <center>
+								  <img src="ProgLevel.png" style="width: 25vw; height: 25vw;">
+								  </center>
+								  <div class="carousel-caption">
+									<font color="#000000">Software Block Diagram</font>
+								  </div>
+								</div>
+								...
+							  </div>
+
+							  <!-- Controls -->
+							  <a class="left carousel-control" href="#Car1Carousel" role="button" data-slide="prev">
+								<span class="glyphicon glyphicon-chevron-left"></span>
+							  </a>
+							  <a class="right carousel-control" href="#Car1Carousel" role="button" data-slide="next">
+								<span class="glyphicon glyphicon-chevron-right"></span>
+							  </a>
+					</div>
+					</center>
+				</div>
+				<div class="panelspace" style="clear: both"></div>
+				<div class="panelfour2">
+					<div class="panelhello1" >
+						<center><h2><font color="#0000A0"><b>Remote</b></font></h2></center>
+					</div>
+					<div class="panelspace"></div>
+					<center>
+						<div class="panelfive">
+							<center>
+								<p1> <font color="#000000">
+								The remote was an added feature that is used as a backup if the autonomous features of the vehicle fail. 
+								</font></p1>
+							</center>
+						</div>
+						<div class="panelspace"></div>
+						<div class="panelfive">
+							<center>
+								<p1> <font color="#000000">
+								The remote has 3 components, a JeeNode which does the readings, calculations and the transmission, a 2-Axis joystick which is used for movement and turning, and a switch. The switch is used to 
+								indicate to the vehicle whether it should be operated autonomously or using remote (ON: Remote, OFF: Autonomous). The joystick's vertical axis is used for movement (forward, reverse), and the horizontal axis
+								is used for turning. 
+								</font></p1>
+							</center>
+						</div>
+						<div class="panelspace"></div>
+						<div class="panelfive">
+							<center>
+								<p1> <font color="#000000">
+								Communication between the remote and the vehicle is done using the RF12 modules on the two JeeNodes. Thanks to Karim H. for writing the RF software to transmit the data from the remote to the vehicle.  
+								</font></p1>
+							</center>
+						</div>
+						<div class="panelspace"></div>
+						<div id="RemoCarousel" class="carousel slide" data-ride="carousel">
+							  <!-- Indicators -->
+							  <ol class="carousel-indicators">
+								<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+								<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+								<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+							  </ol>
+								...
+							  <!-- Wrapper for slides -->
+							  <div class="carousel-inner">
+								<div class="item active">
+								  <center>
+								  <img src="Remo.jpg" style="width: 25vw; height: 25vw;">
+								  </center>
+								  <div class="carousel-caption">
+									<font color="#000000">2-Axis Joystick</font>
+								  </div>
+								</div>
+								<div class="item">
+								  <center>
+								  <img src="RemoCircLevel.png" style="width: 25vw; height: 25vw;">
+								  </center>
+								  <div class="carousel-caption">
+									<font color="#000000">Circuit Level Diagram</font>
+								  </div>
+								</div>
+								<div class="item">
+								  <center>
+								  <img src="RemoProgLevel.png" style="width: 25vw; height: 25vw;">
+								  </center>
+								  <div class="carousel-caption">
+									<font color="#000000">Software Block Diagram</font>
+								  </div>
+								</div>
+								...
+							  </div>
+
+							  <!-- Controls -->
+							  <a class="left carousel-control" href="#RemoCarousel" role="button" data-slide="prev">
+								<span class="glyphicon glyphicon-chevron-left"></span>
+							  </a>
+							  <a class="right carousel-control" href="#RemoCarousel" role="button" data-slide="next">
+								<span class="glyphicon glyphicon-chevron-right"></span>
+							  </a>
+					</div>
+					</center>
+				</div>
+				<div class="panelspace" style="clear: both"></div>
+				<div class="panelfour2">
+					<div class="panelhello1" >
+						<center><h2><font color="#0000A0"><b>Video</b></font></h2></center>
+					</div>
+					<div class="panelspace"></div>
+					<center>
+						<div class="panelfive">
+							<center>
+								<p1> <font color="#000000">
+								The video below shows the vehicle in action. 
+								</font></p1>
+							</center>
+						</div>
+						<div class="panelspace"></div>
+						<iframe width="1280" height="720" src="https://www.youtube.com/embed/nGZ5zyydfZE" frameborder="0" allowfullscreen></iframe>
+					</center>
+				</div>
+				
+				<div class="panelspace" style="clear: both"></div>
+				
+				<div class="panelspace" style="clear: both"></div>
+
+				<div class="panelspace"></div>
+				<center>
+				<div class="secondinfo1">	
+					<!-- Initializing a main panel-->	
+						<p2><font color="#000000">"Thank you for visiting my website." Maytham Sabbagh </font></p2>
+				</div>
+				</center>
+				<div class="panelspace"></div>
+				
+		</div>
+
+
+	</div>
+	</font></b>
+</body>
+
+
+</html>

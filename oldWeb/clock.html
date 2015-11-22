@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> Clock RPi</title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link href="bootstrap-3.2.0-dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="MyStyles/font1/font1.css" />
+<link rel="stylesheet" href="fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-thumbs.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-buttons.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="MyStyles/Styles1.css" type="text/css" media="screen" />
+</head>
+
+<style>
+	body{
+		background-image: url("back.jpg");
+	}
+</style>
+
+<body>
+
+	<!-- Initializing all the scripts-->
+	<script src="bootstrap-3.2.0-dist/js/jquery.min.js"></script>
+	<script src="bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
+	
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript" src="fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+	<script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js"></script>
+	<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-buttons.js"></script>
+	<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-media.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#single_1").fancybox({
+				helpers: {
+					title : {
+						type : 'float'
+					}
+				}
+			});
+		});
+		
+	</script>
+	<script type="text/javascript" src="/fancybox/source/helpers/jquery.fancybox-thumbs.js"></script>
+	
+	<div class="panelspace"></div>
+	<b><font face="oldstyle_1hplhs">
+	<!-- Initializing the navigation bar-->
+	<center>
+		<ul class="nav nav-pills  nav-justified">
+	
+			<li><a href="index.html"><font color="#0000A0">Home</font></a></li>
+			<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+						<font color="#0000A0">Projects</font> <span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="calendar.html"><font color="#0000A0">C++ Calendar</font></a></li>
+						<li><a href="plantsvzombies.html"><font color="#0000A0">Java Plants vs. Zombies</font></a></li>
+						<li class="active"><a href="clock.html"><font color="#0000A0">Raspberry Pi Clock</font></a></li>
+						<li><a href="calendargui.html"><font color="#0000A0">Java Calendar GUI (MCalendar)</font></a></li>
+						<li><a href="robovoy.html"><font color="#0000A0">RoboVoy (Autonomous Vehicle)</font></a></li>
+						<li class="disabled"><a href="#"><font color="#0000A0">This Website</font></a></li>
+				</ul>
+			</li>
+			<li><a href="courses.html"><font color="#0000A0">Completed Courses</font></a></li>
+			<li><a href="aboutme.html"><font color="#0000A0">About Me</font></a></li>
+		</ul>
+	</center>
+	
+
+	<div id="container-fluid" style="viewport" class="myMainContainer">	
+
+	
+		<div class="content">
+				<div class="panelspace"></div>
+				<div class="panelhello" >
+					<h1><font color="#0000A0"><center>Raspberry Pi Clock</center></font></h1>
+				</div>
+				
+				<div class="panelspace"></div>
+				
+				
+				<div class="panelfive">
+					<center>
+						<p1><font color="#000000">In this project, a clock was created using a Raspberry Pi and a 4 digit 7 segment display.</font></p1>
+					</center>
+				</div>
+				<div class="panelspace"></div>	
+				<div class="panelfive">
+					<center>
+						<p3><font color="#000000">First the 4 digit 7 segment display was connected as seen in the two pictures below.<br> The connection uses the I<sup>2</sup>C technology to
+						connect the display to the Raspberry Pi.<br> Then using the Raspberry Pi, the Python script was created. <br>
+						The Python script was then set to make it run every time the Raspberry Pi boots up. <br> The LED seen in the pictures is turned ON
+						when the time is between 10PM and 6AM.<br> This project was inspired by Dr. Monk's DIY Electronics Blog.
+						</font></p3>
+					</center>
+				</div>
+				
+				<div class="panelspace"></div>	
+				<div class="panelfour">
+					<div class="panelleft">
+						<div class="panelright">
+							<center>
+								<a id="single_1" href="clock2.jpg" title="The clock during the day">
+									<img src="clock22.jpg" alt="" style="border:1px solid #0000FF; border-radius: 1.5vw"/>
+								</a>
+							</center>
+						</div>
+					</div>	
+					<div class="panelright">
+						<div class="panelleft">
+							<center>
+								<a id="single_1" href="clock1.jpg" title="The clock after 10PM">
+									<img src="clock11.jpg" alt="" style="border:1px solid #0000FF; border-radius: 1.5vw"/>
+								</a>
+							</center>
+						</div>
+					</div>
+				</div>
+				
+				<div class="panelspace" style="clear: both"></div>
+				<div class="panelhello1" >
+					<center><h2><font color="#0000A0"><b>The Equipment & Software Used Are:</b></font></h2></center>
+				</div>
+				<div class="panelspace"></div>
+				
+				<center>
+				<!-- Initializing the third panel-->
+					<div class="thirdinfo">
+						<ul class="list-group" >
+							<font color="#000000">
+							<li class="list-group-item">Raspberry Pi</li>
+							<li class="list-group-item">Cobbler</li>
+							<li class="list-group-item">4 digit 7 segment display and Backpack</li>
+							<li class="list-group-item">Level Converter</li>
+							<li class="list-group-item">Breadboard</li>
+							<li class="list-group-item">Jumper Wires</li>
+							<li class="list-group-item">Python I<sup>2</sup>C library <p2><a href="https://code.google.com/p/i2c7segment/downloads/list">Here</a></p2></li>
+							<li class="list-group-item">A sample clock program is also provided with the library.</li>
+							</font>
+						</ul>
+					</div>
+				</center>
+				
+				<div class="panelfive">
+					<center>
+						<p3><font color="#000000">The following lines need to be added in the library specified above in order for the display to function properly. <br>
+						If the lines are not added; the higher digits of the 4 digit 7 segment display will stay on after midnight. This means that for example, if the time is 00:05. <br>
+						The clock will display 23:55, the 23:5# are there because they were the last valus in those digits before midnight. Since the clock doesn't reset them, they stay there. The following code (in the picture) should be added in order to fix the issue. 
+						</font></p3>
+					</center>
+				</div>
+				
+				<div class="panelspace"></div>
+				
+				<div class="panelfour">
+					<!-- Initializing the main info panel-->
+					<div class="maininfo">
+						<center>
+						<p1><font color="#000000">Inside the print_int method, above i = 0. The lines in the picture to the right need to be added;</font></p1>
+						</center>
+					</div>
+					
+					<!-- Initializing the picture panel-->
+					<div class="pic">
+						<center>
+							<a id="single_1" href="clockfix.png" title="Code to fix the library">
+								<img src="clockfix1.png" alt="" style="border:1px solid #0000FF; border-radius: 1.5vw"/>
+							</a>
+						</center>
+					</div>
+				</div>	
+				
+				<div class="panelspace" style="clear: both"></div>
+				
+				<div class="panelfour">
+					<!-- Initializing the main info panel-->
+					<div class="maininfo">
+						<center>
+							<p1><font color="#000000">To install everything, follow the instruction in the picture.</font></p1>
+						</center>
+					</div>
+					
+					<!-- Initializing the picture panel-->
+					<div class="pic">
+						<center>
+							<a id="single_1" href="clock3.png" title="Code to install the library">
+								<img src="clock33.png" alt="" style="border:1px solid #0000FF; border-radius: 1.5vw"/>
+							</a>
+						</center>
+					</div>
+				</div>	
+				
+				<div class="panelspace" style="clear: both"></div>
+				
+				<!-- Initializing the title in a list group-->
+				<ul class="list-group" >
+					<li class="list-group-item"><font color="#0000A0"><center>Thanks to Dr.Monk's DIY Electronics Blog (<p2><a href="http://www.doctormonk.com/2012/08/led-clock-using-raspberry-pi.html">Here</a></p2>) for the cool project. Follow the link to get the full project details.</center></font></li>
+				</ul>
+				
+				<div class="panelspace"></div>
+				<center>
+				<div class="secondinfo1">	
+					<!-- Initializing a main panel-->	
+						<p2><font color="#000000">"Thank you for visiting my website." Maytham Sabbagh </font></p2>
+				</div>
+				</center>
+				<div class="panelspace"></div>
+
+			</font></b>
+		</div>
+
+
+	</div>
+</body>
+
+
+</html>
