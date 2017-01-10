@@ -766,9 +766,8 @@
 								<!-- Modal end -->
 							</div>
 						
-						<!-- portfolio items end -->
-						<div class="col-sm-6 col-md-3 isotope-item 
-						embedded-design">
+							<!-- portfolio items end -->
+							<div class="col-sm-6 col-md-3 isotope-item embedded-design">
 								<div class="image-box">
 									<div class="overlay-container">
 										<img src="images/cansat2016.jpg" alt="">
@@ -837,6 +836,118 @@
 								</div>
 								<!-- Modal end -->
 							</div>	
+							
+							<!-- portfolio items end -->
+							<div class="col-sm-6 col-md-3 isotope-item embedded-design">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="images/4thyearexplode.png" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-10">
+											<i class="fa fa-search-plus"></i>
+											<span>Embedded Design</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-10">Shifty (4th Year Project)</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-10" tabindex="-1" role="dialog" aria-labelledby="project-10-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-10-label">Shifty: Automatic Bicycle Transmission System</h4>
+											</div>
+											<div class="modal-body">
+												<h3>Project Description</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<strong><p>PROJECT IS CURRENTLY IN PROGRESS</p></strong>
+														<p>The shifty is a smart device which accompanies the cyclist on their journey through the urban landscape.</p>
+														<p>The automatic transmission module built into the shifty is designed to take the task of shifting gears off the hands of the cyclist. The shifty anticipates and reacts to environmental changes to keep cycling as comfortable and efficient as possible.</p>
+														<p>The project consists of three microcontrollers;</p>
+														<ul>
+														<li>UI/GPS Controller</li>
+															<ul>
+															<li>User Interface using an LCD</li>
+															<li>SD Card for logging and map image file storage</li>
+															<li>GPS module for coordinates and GPS time</li>
+															<li>SPI connection to Algorithm/Bluetooth Controller</li>
+															</ul>
+														<li>Algorithm/Bluetooth Controller</li>
+															<ul>
+															<li>Transmission Algorithm</li>
+															<li>Bluetooth Connection to Sensors (Speed/Cadence Sensor, and Heart Rate Sensor)</li>
+															<li>Connection to Orientation Sensors</li>
+															<li>I2C Connection to Motor Controller</li>
+															</ul>
+														<li>Motor Controller</li>
+															<ul>
+															<li>Motor Driver</li>
+															<li>Motor Feedback and current detection</li>
+															</ul>
+														</ul>
+
+														<p>The group consists of 4 Electrical Engineering students, the work is divided between all members with my roles identified below;</p>
+														<ul>
+														<li>Team Lead</li>
+															<ul>
+															<li>Lead meetings and assign deadlines that fit with the course deadlines</li>
+															<li>Schedule meetings</li>
+															<li>Look for and ensure external funding is applied for and received to keep the project development going</li>
+															</ul>
+														<li>UI Subsystem Designer</li>
+															<ul>
+															<li>Design a simple, easy to use UI running on an STM32F469 and a DSI LCD touchscreen</li>
+															<li>Integrate an SD card for map tile images and also for logging of the system</li>
+																<ul>
+																<li>Custom log formating that includes time, message and data in a comma separated value (csv) format</li>
+																</ul>
+															<li>Integrate a GPS module as a separate thread to obtain GPS coordinates</li>
+																<ul>
+																<li>Thread waits for a message from the main UI thread in order to retrieve the data from the GPS module</li>
+																<li>GPS coordinates are used in calculating map tile values</li>
+																<li>UI thread uses those map tile values to retrieve the map tiles from the SD card and display on the screen</li>
+																</ul>
+															<li>Integrate SPI drivers to communicate with a algorithm/bluetooth controller</li>
+																<ul>
+																<li>Thread waits for a message from the main UI thread in order to retrieve data from or send data to the 2nd controller</li>
+																<li>Data retrieved from the 2nd controller can include speed, rpm, battery status, heart rate, and other data bluetooth data</li>
+																<li>Data sent to the 2nd controller is settings related to the bicycle that the user inputs in the UI</li>
+																<li>2nd controller also passes logs through the SPI in order to be included in the logs on the SD card</li>
+																<li>External interrupts are used to allow the 2nd controller to notify the UI controller of data</li>
+																</ul>
+															<li>Messaging queues are used in order to coordinate and send messages and data between the different threads</li>
+															<li>Common code and resources (such as the SD card) are locked with semaphores to ensure no conflicts between the threads</li>
+															<li>Keil CMSIS-RTX RTOS is used for threading, message queues and semaphores</li>
+															</ul>
+														<li>Hardware Reviewer</li>
+															<ul>
+															<li>Review the hardware designs before they are sent out for printing</li>
+															</ul>
+														</ul>
+													</div>
+													<div class="col-md-6">
+														<img src="images/4thyearmain.jpg" alt="Basic UI (early development)" title="Basic UI (early development)">
+													</div>
+													<div class="space"></div>
+													<div class="col-md-6">
+														<img src="images/4thyearblocks.png" alt="2 Blocks of the system" title="2 Blocks of the system">
+													</div>
+													<div class="space"></div>
+													<div class="col-md-6">
+														<img src="images/4thyearexplode.png" alt="Explode showing the hardware in the project" title="Explode showing the hardware in the project">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+							
 						</div>
 					</div>
 				</div>
