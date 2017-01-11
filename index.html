@@ -80,7 +80,7 @@
 
 								<!-- navbar start -->
 								<!-- ================ -->
-								<nav class="navbar navbar-default" role="navigation">
+								<nav class="navbar navbar-default">
 									<div class="container-fluid">
 
 										<!-- Toggle get grouped for better mobile display -->
@@ -98,7 +98,7 @@
 											<ul class="nav navbar-nav navbar-right">
 												<li class="active"><a href="#banner">Home</a></li>
 												<li><a href="#about">About</a></li>
-												<li><a href="#roles">Roles</a></li>
+												<li><a href="#currentRoles">Roles</a></li>
 												<li><a href="#portfolio">Portfolio</a></li>
 												<li><a href="#work">Work</a></li>
 												<li><a href="#contact">Contact</a></li>
@@ -229,7 +229,7 @@
 		<!-- ================ -->
 		<div class="section translucent-bg blue">
 			<div class="container object-non-visible" data-animation-effect="fadeIn">
-				<h1 id="roles"  class="text-center title">Current Roles</h1>
+				<h1 id="currentRoles"  class="text-center title">Current Roles</h1>
 				<div class="space"></div>
 				<div class="row">
 					<div class="col-sm-6">
@@ -266,7 +266,7 @@
 					</div>
 				</div>
 				<div class="space"></div>
-				<h1 id="roles"  class="text-center title">Previous Roles</h1>
+				<h1 id="previousRoles"  class="text-center title">Previous Roles</h1>
 				<div class="space"></div>
 				<div class="row">
 					<div class="col-sm-6">
@@ -466,54 +466,68 @@
 												<h3>Project Description</h3>
 												<div class="row">
 													<div class="col-md-6">
-														<strong><p>PROJECT IS CURRENTLY IN PROGRESS</p></strong>
+														<p><strong>PROJECT IS CURRENTLY IN PROGRESS</strong></p>
 														<p>The shifty is a smart device which accompanies the cyclist on their journey through the urban landscape.</p>
 														<p>The automatic transmission module built into the shifty is designed to take the task of shifting gears off the hands of the cyclist. The shifty anticipates and reacts to environmental changes to keep cycling as comfortable and efficient as possible.</p>
 														<p>The project consists of three microcontrollers;</p>
 														<ul>
 														<li>UI/GPS Controller</li>
+														<li>
 															<ul>
 															<li>User Interface using an LCD</li>
 															<li>SD Card for logging and map image file storage</li>
 															<li>GPS module for coordinates and GPS time</li>
 															<li>SPI connection to Algorithm/Bluetooth Controller</li>
 															</ul>
+														</li>
 														<li>Algorithm/Bluetooth Controller</li>
+														<li>
 															<ul>
 															<li>Transmission Algorithm</li>
 															<li>Bluetooth Connection to Sensors (Speed/Cadence Sensor, and Heart Rate Sensor)</li>
 															<li>Connection to Orientation Sensors</li>
 															<li>I2C Connection to Motor Controller</li>
 															</ul>
+														</li>
 														<li>Motor Controller</li>
+														<li>
 															<ul>
 															<li>Motor Driver</li>
 															<li>Motor Feedback and current detection</li>
 															</ul>
+														</li>
 														</ul>
 
 														<p>The group consists of 4 Electrical Engineering students, the work is divided between all members with my roles identified below;</p>
 														<ul>
 														<li>Team Lead</li>
+														<li>
 															<ul>
 															<li>Lead meetings and assign deadlines that fit with the course deadlines</li>
 															<li>Schedule meetings</li>
 															<li>Look for and ensure external funding is applied for and received to keep the project development going</li>
 															</ul>
+														</li>
 														<li>UI Subsystem Designer</li>
+														<li>
 															<ul>
 															<li>Design a simple, easy to use UI running on an STM32F469 and a DSI LCD touchscreen</li>
 															<li>Integrate an SD card for map tile images and also for logging of the system</li>
+															<li>
 																<ul>
 																<li>Custom log formating that includes time, message and data in a comma separated value (csv) format</li>
 																</ul>
+															</li>
 															<li>Integrate a GPS module as a separate thread to obtain GPS coordinates</li>
+															<li>
 																<ul>
 																<li>Thread waits for a message from the main UI thread in order to retrieve the data from the GPS module</li>
 																<li>GPS coordinates are used in calculating map tile values</li>
 																<li>UI thread uses those map tile values to retrieve the map tiles from the SD card and display on the screen</li>
 																</ul>
+															</li>
 															<li>Integrate SPI drivers to communicate with a algorithm/bluetooth controller</li>
+															<li>
 																<ul>
 																<li>Thread waits for a message from the main UI thread in order to retrieve data from or send data to the 2nd controller</li>
 																<li>Data retrieved from the 2nd controller can include speed, rpm, battery status, heart rate, and other data bluetooth data</li>
@@ -521,14 +535,18 @@
 																<li>2nd controller also passes logs through the SPI in order to be included in the logs on the SD card</li>
 																<li>External interrupts are used to allow the 2nd controller to notify the UI controller of data</li>
 																</ul>
+															</li>
 															<li>Messaging queues are used in order to coordinate and send messages and data between the different threads</li>
 															<li>Common code and resources (such as the SD card) are locked with semaphores to ensure no conflicts between the threads</li>
 															<li>Keil CMSIS-RTX RTOS is used for threading, message queues and semaphores</li>
 															</ul>
+														</li>
 														<li>Hardware Reviewer</li>
+														<li>
 															<ul>
 															<li>Review the hardware designs before they are sent out for printing</li>
 															</ul>
+														</li>
 														</ul>
 													</div>
 													<div class="col-md-6">
@@ -579,14 +597,13 @@
 													<div class="col-md-6">
 														<p>The Carleton University Raven Knights CanSat team competes every year in the International CanSat Competition in Abilene, Texas.</p>
 														<p>The purpose was to design a rocket deployed glider that will be launched to approximately 1000 meters, and must descent with a circular radiuss of 1 km. Additional telemetry data of atmospheric conditions was also calculated, managed, saved and transmitted to a ground station for analysis. </p>
-														<p>The competition was organized by esteemed institutions including:
+														<p>The competition was organized by esteemed institutions including:</p>
 														<ul>
 														<li>National Aeronautics and Space Administration</li>
 														<li>American Astronautical Society</li>
 														<li>American Institude of Aeronautics and Astronautics</li>
 														</ul>
-														</p>
-														<p>My role was to help with the Software of the Glider, help with the ground station data dumping software, used in post flight EEPROM dumping, design the container hardware and software used for the purpose of releasing the glider from the container. My role included;
+														<p>My role was to help with the Software of the Glider, help with the ground station data dumping software, used in post flight EEPROM dumping, design the container hardware and software used for the purpose of releasing the glider from the container. My role included;</p>
 														<ul>
 														<li>Design container hardware</li>
 														<li>Design the I2C driver (glider/container)</li>
@@ -598,7 +615,6 @@
 														<li>Design the main software thread of execution for the container to perform the necessary tasks</li>
 														<li>Implement bug fixes in the glider's main software that helped in improving camera usage, data transmission, and image transmission to the ground station</li>
 														</ul>
-														</p>
 														<p>Our team achieved 2nd place out of 70+ registered teams.</p>
 														<p>More details about the competition can be found <a href="http://www.cansatcompetition.com/">here</a></p>
 													</div>
@@ -641,7 +657,7 @@
 										<div class="modal-content">
 											<div class="modal-header">
 												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-												<h4 class="modal-title" id="project-4-label">MSnake</h4>
+												<h4 class="modal-title" id="project-8-label">MSnake</h4>
 											</div>
 											<div class="modal-body">
 												<h3>Project Description</h3>
@@ -739,14 +755,13 @@
 													<div class="col-md-6">
 														<p>The Carleton University Raven Knights CanSat team competes every year in the International CanSat Competition in Abilene, Texas.</p>
 														<p>The purpose was to design a Science Vehicle that will be launched to approximately 1000 meters, where it records a stabilized video of its descent. Additional telemetry data of atmospheric conditions was also calculated, managed, saved and transmitted to a ground station for analysis. The Science Vehicle was also to contain and protect one large raw hens egg throughout the entire mission.</p>
-														<p>The competition was organized by esteemed institutions including:
+														<p>The competition was organized by esteemed institutions including:</p>
 														<ul>
 														<li>National Aeronautics and Space Administration</li>
 														<li>American Astronautical Society</li>
 														<li>American Institude of Aeronautics and Astronautics</li>
 														</ul>
-														</p>
-														<p>My role was to help with the Software of the Science Vehicle. My main role was to:
+														<p>My role was to help with the Software of the Science Vehicle. My main role was to:</p>
 														<ul>
 														<li>Design the I2C driver</li>
 														<li>Collect Pressure and Temperature from BMP180 sensor</li>
@@ -757,7 +772,6 @@
 														<li>Maintain all the telemtry data and store them in a AT24CM01 EEPROM</li>
 														<li>Help maintain the main software to ensure best behaviour, efficiency and optimization</li>
 														</ul>
-														</p>
 														<p>Our team achieved 3rd place out of 62 registered teams from 11 countries.</p>
 														<p>More details about the competition can be found <a href="http://www.cansatcompetition.com/">here</a></p>
 													</div>
