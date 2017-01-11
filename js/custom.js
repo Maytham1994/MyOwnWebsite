@@ -20,7 +20,7 @@ $(function(){
         var pdf_link = $(this).attr('href');
         //var iframe = '<div class="iframe-container"><iframe src="'+pdf_link+'"></iframe></div>'
         //var iframe = '<object data="'+pdf_link+'" type="application/pdf"><embed src="'+pdf_link+'" type="application/pdf" /></object>'        
-        var iframe = '<object type="application/pdf" data="'+pdf_link+'" width="100%" height="600">No Support</object>'
+        var iframe = '<object type="application/pdf" data="'+pdf_link+'" width="100%" height="600">Your browser doesn`t support PDF Viewer <a href="'+pdf_link+'">Download Resume Instead</a></object>'
         $.createModal({
             title:'Maytham Sabbagh Resume January 2017',
             message: iframe,

@@ -116,7 +116,7 @@ blockquote {
 ----------------------------------------------------------------------------- */
 .header {
 	color: #ffffff;
-	background-color: rgba(0, 0, 0, 0.10);
+	background-color: rgba(0, 0, 0, 0.55);
 	padding: 10px 0;
 	-webkit-transition: all 0.2s ease-in-out;
 	-moz-transition: all 0.2s ease-in-out;
@@ -150,6 +150,14 @@ blockquote {
 	top: 40%;
 	width: 100%;
 	z-index: 2;
+}
+@media only screen and (max-width: 700px) {
+	.banner {
+		height: 120%;
+	}
+	.banner-caption {
+		top: 20%;
+	}
 }
 .subfooter {
 	background-color: #fafafa;
@@ -291,7 +299,6 @@ blockquote {
 .subfooter p {
 	margin-bottom: 0;
 }
-
 /* Template Components
 ----------------------------------------------------------------------------- */
 /* Buttons
@@ -463,6 +470,7 @@ textarea {
 ----------------------------------------------------------------------------- */
 .header .navbar {
 	margin-bottom: 0;
+	position: relative;
 }
 .main-navigation .navbar-default {
 	background-color: transparent;
@@ -504,7 +512,11 @@ textarea {
 }
 @media (max-width:767px) {
 	.header.navbar-fixed-top {
-		position: absolute;
+		position: relative;
+		background-color: rgba(0, 0, 0, 1.1);
+	}
+	.navbar {
+		margin-bottom: 0;
 	}
 }
 
