@@ -153,10 +153,10 @@ blockquote {
 }
 @media only screen and (max-width: 700px) {
 	.banner {
-		height: 120%;
+		height: 130%;
 	}
 	.banner-caption {
-		top: 20%;
+		top: 30%;
 	}
 }
 .subfooter {
@@ -512,7 +512,7 @@ textarea {
 }
 @media (max-width:767px) {
 	.header.navbar-fixed-top {
-		position: relative;
+		position: fixed;
 		background-color: rgba(0, 0, 0, 1.1);
 	}
 	.navbar {
