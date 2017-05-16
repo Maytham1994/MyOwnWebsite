@@ -40,3 +40,14 @@ File Description: Place here your custom CSS styles
 #myBanner{
 	text-align: center;
 }
+
+.projectimages {
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 5px;
+}
+
+.imageCap {
+	text-align: center;
+	font-weight: bold;
+}
