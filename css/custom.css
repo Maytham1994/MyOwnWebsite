@@ -8,6 +8,23 @@ License: Creative Commons Attribution 3.0 License (https://creativecommons.org/l
 File Description: Place here your custom CSS styles
 */
 
+.list-group-item {
+	border: 1px solid #ddd;
+	border-right: 0 none;
+	border-left: 0 none;
+}
+
+.list-group-item:first-child {
+	border-top: 0 none;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+}
+.list-group-item:last-child {
+	border-bottom: 0 none;
+	margin-bottom: 0;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
 
 .footer-content{
 	text-align: center;
