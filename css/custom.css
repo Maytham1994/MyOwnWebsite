@@ -9,6 +9,10 @@ File Description: Place here your custom CSS styles
 */
 
 .list-group-item {
+  background-color: transparent;
+}
+
+.list-group-item {
 	border: 1px solid #ddd;
 	border-right: 0 none;
 	border-left: 0 none;

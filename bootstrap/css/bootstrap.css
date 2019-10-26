@@ -4641,7 +4641,7 @@ a.badge:focus {
 a.list-group-item.active > .badge,
 .nav-pills > .active > a > .badge {
   color: #428bca;
-  /* background-color: #fff; */
+  background-color: #fff;
 }
 .nav-pills > li > a > .badge {
   margin-left: 3px;
@@ -4922,7 +4922,7 @@ a.thumbnail.active {
   display: block;
   padding: 10px 15px;
   margin-bottom: -1px;
-  /* background-color: #fff; */
+  background-color: #fff;
   border: 1px solid #ddd;
 }
 .list-group-item:first-child {
